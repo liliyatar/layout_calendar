@@ -1,0 +1,30 @@
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 714px;
+  margin: 100px auto;
+
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 100px;
+    margin: 1px;
+
+    background-color: #eee;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    visibility: hidden;
+
+    &:hover {
+      background-color: #febfcf;
+      margin-top: -20px;
+      transition: 0.5s;
+    }
+  }
+}

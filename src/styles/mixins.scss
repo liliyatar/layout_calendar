@@ -1,0 +1,19 @@
+@import "variables";
+
+@each $day, $indent in $days {
+  .calendar-#{$day} div:first-child {
+    margin-left: #{$indent}px;
+  }
+}
+
+@for $i from 1 through 31 {
+  .calendar div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+@each $day in $days_number {
+  .calendar-#{$day} > div:nth-child(-n+#{$day}) {
+    visibility: visible;
+  }
+}
